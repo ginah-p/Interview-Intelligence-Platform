@@ -1,0 +1,15 @@
+CREATE TABLE dim_time(
+    date_key INTEGER PRIMARY KEY, /*fORMAT yyyymmdd */
+    full_date DATE NOT NULL UNIQUE,
+    day_of_week INTEGER, /* 1 = MONDAY, 7 = SUNDAY*/
+    day_name VARCHAR(10),
+    day_of_month INTEGER,
+    day_of_year INTEGER,
+    week_of_year INTEGER,
+    month INTEGER,
+    month_name VARCHAR(10),
+    quarter INTEGER,
+    year INTEGER,
+    is_weekend BOOLEAN,
+    is_holiday BOOLEAN DEFAULT FALSE
+);
