@@ -1,0 +1,16 @@
+CREATE TABLE dim_questions(
+    question_key SERIAL PRIMARY KEY,
+    question_id VARCHAR(100) UNIQUE NOT NULL, /*BUSINESS KEY*/
+    question_text TEXT NOT NULL,
+    topic_key INTEGER NOT NULL,
+    difficulty VARCHAR(20), /*easy, medium, hard*/
+    source VARCHAR(50), /* LeetCode, Manual, GlasssDoor, GeeksforGeeks*/
+    source_url TEXT,
+    frequency_asked INTEGER DEFAULT 1, /*NUMBER OF TIMES QUES HAS BEEN ASKED*/
+    average_difficulty_rating DECIMAL(3,2), 
+    is_current DEFAULT BOOLEAN TRUE, --for ScD type 2
+    effective_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    end_date TIMESTAMP, --NULL MEANS CURRENT RECORD
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (topic_key) REFERENCEs dim_topics(topic_key)
+);

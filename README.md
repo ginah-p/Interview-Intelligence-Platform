@@ -259,8 +259,8 @@ _Coming soon - schema diagrams and query results_
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/ginah-p)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/chantel-gina-pindula-a21739238)
+- GitHub: [@ginah-p](https://github.com/ginah-p)
+- LinkedIn: [Chantel Pindula](https://www.linkedin.com/in/chantel-gina-pindula-a21739238)
 
 ---
 

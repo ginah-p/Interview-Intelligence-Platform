@@ -1,0 +1,10 @@
+COMMENT ON TABLE dim_companies IS 'Dimension table storing company information';
+COMMENT ON TABLE dim_time IS 'Date dimension for time intelligence queries';
+COMMENT ON TABLE dim_topics IS 'Hierarchical topic structure (e.g., DSA -> Arrays -> Two Pointer)';
+COMMENT ON TABLE dim_questions IS 'Question bank with SCD Type 2 for historical tracking';
+COMMENT ON TABLE fact_interview_events IS 'Fact table storing interview events at question-level grain';
+
+COMMENT ON COLUMN fact_interview_events.event_key IS 'Surrogate key for each interview event';
+COMMENT ON COLUMN fact_interview_events.interview_round_id IS 'Degenerate dimension linking questions from same round';
+COMMENT ON COLUMN dim_questions.is_current IS 'SCD Type 2: TRUE for current version of question';
+COMMENT ON COLUMN dim_questions.frequency_asked IS 'Aggregate count of how many times this question appeared';

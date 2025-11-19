@@ -1,0 +1,9 @@
+CREATE TABLE dim_round_types(
+    round_type SERIAL PRIMARY KEY,
+    round_type_id VARCHAR(50) UNIQUE NOT NULL, /* BUSINESS KEY*/
+    round_type_name VARCHAR(100) NOT NULL, /*OA TECHNICAL -1, TECHNICAL-2*/
+    round_sequnce INTEGER, 
+    description TEXT,
+    is_active BOOLEAN DEFAULT TRUE,
+
+);
