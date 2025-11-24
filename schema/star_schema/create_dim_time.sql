@@ -1,7 +1,8 @@
-CREATE TABLE dim_time(
-    date_key INTEGER PRIMARY KEY, /*fORMAT yyyymmdd */
+-- Dimension: Time
+CREATE TABLE dim_time (
+    date_key INTEGER PRIMARY KEY,
     full_date DATE NOT NULL UNIQUE,
-    day_of_week INTEGER, /* 1 = MONDAY, 7 = SUNDAY*/
+    day_of_week INTEGER,
     day_name VARCHAR(10),
     day_of_month INTEGER,
     day_of_year INTEGER,

@@ -1,0 +1,29 @@
+* strftime:
+
+* psycopg2:
+
+* cursor.execute method:"This code populates the dim_time table with every single date from 2024-01-01 to 2025-12-31, along with pre-calculated date attributes.Why? So you never have to calculate "what quarter is this date in?" or "is this a weekend?" during queries - it's already stored!"
+
+* Conflict clause: If we try to insert a date that already exists (same full_date)
+Don't throw an error
+Just skip it and move on
+
+Why needed?
+
+You might run the seed script multiple times
+Prevents duplicate dates
+
+* Greedy Algorithms are a problem-solving approach where you make the locally optimal choice at each step, hoping it leads to a globally optimal solution.Key Concept:
+
+Make the best choice RIGHT NOW
+Never reconsider previous choices
+Hope it works out overall!
+Real-Life Example:
+Imagine you're making change for $0.63 using US coins:
+
+Greedy approach: Always pick the largest coin possible
+
+## 👤 Author: Chantel Pindula
+
+- GitHub: [@ginah-p](https://github.com/ginah-p)
+- LinkedIn: [Chantel Pindula](https://www.linkedin.com/in/chantel-gina-pindula-a21739238)

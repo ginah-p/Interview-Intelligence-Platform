@@ -1,9 +1,9 @@
--- Fcts table indexes critical for query perfomance
-
+-- Fact table indexes
 CREATE INDEX idx_fact_company ON fact_interview_events(company_key);
 CREATE INDEX idx_fact_date ON fact_interview_events(date_key);
 CREATE INDEX idx_fact_round_type ON fact_interview_events(round_type_key);
 CREATE INDEX idx_fact_question ON fact_interview_events(question_key);
 CREATE INDEX idx_fact_result ON fact_interview_events(result);
 CREATE INDEX idx_fact_round_id ON fact_interview_events(interview_round_id);
-CREATE INDEX idx_fact_round_id ON fact_interview_events(interview_round_id);
+CREATE INDEX idx_fact_company_date ON fact_interview_events(company_key, date_key);
+CREATE INDEX idx_fact_date_result ON fact_interview_events(date_key, result);

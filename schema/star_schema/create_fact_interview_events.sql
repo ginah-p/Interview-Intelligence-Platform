@@ -1,38 +1,23 @@
-CREATE TABLE fact_interview_events(
+CREATE TABLE fact_interview_events (
     event_key SERIAL PRIMARY KEY,
-    
-    --Foreign keys to dimensions
     company_key INTEGER NOT NULL,
-    date_key  INTEGER NOT  NULL,
+    date_key INTEGER NOT NULL,
     round_type_key INTEGER NOT NULL,
     question_key INTEGER NOT NULL,
-
-    --Degenerate dimensions (attributes that do not need seperate dimensions)
     interview_round_id VARCHAR(100),
-
-    -- MEASURES (METRICS I WANT TO ANALYZE)
     duration_minutes INTEGER,
-    result VARCHAR(20), --passesd,failed,pending
+    result VARCHAR(20),
     difficulty_rating INTEGER CHECK (difficulty_rating BETWEEN 1 AND 5),
-    answer_quality_rating INTEGER CHECK(answer_quality_rating BETWEEN 1 AND 5),
-    preparation_time_hours DECIMAL(5,2) ,--TIME SPENT PREPARING
-
-    --Flags for analysis
-    was_prepared BOOLEAN DEFAULT FALSE, --Did you prepare for this question
+    answer_quality_rating INTEGER CHECK (answer_quality_rating BETWEEN 1 AND 5),
+    preparation_time_hours DECIMAL(5,2),
+    was_prepared BOOLEAN DEFAULT FALSE,
     needed_hint BOOLEAN DEFAULT FALSE,
     completed_in_time BOOLEAN DEFAULT TRUE,
-
-    --Metadata
     notes TEXT,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-
-    --Foreign key constraints
     FOREIGN KEY (company_key) REFERENCES dim_companies(company_key),
     FOREIGN KEY (date_key) REFERENCES dim_time(date_key),
-    FOREIGN KEY (round_type_key) REFERENCES  dim_round_types(round_type_key),
+    FOREIGN KEY (round_type_key) REFERENCES dim_round_types(round_type_key),
     FOREIGN KEY (question_key) REFERENCES dim_questions(question_key)
-
-
 );

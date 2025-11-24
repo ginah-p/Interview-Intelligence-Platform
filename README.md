@@ -116,7 +116,7 @@ pip
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/interview-analytics-platform.git
+git clone  (https://github.com/ginah-p/Interview-Intelligence-Plartform)
 cd interview-analytics-platform
 ```
 
@@ -256,16 +256,40 @@ _Coming soon - schema diagrams and query results_
 **Week 3**: 📋 Analytics queries and optimization
 **Week 4**: 📋 Dashboard and documentation
 
-## 👤 Author
+## 👤 Author: Chantel Pindula
 
-**Your Name**
 - GitHub: [@ginah-p](https://github.com/ginah-p)
 - LinkedIn: [Chantel Pindula](https://www.linkedin.com/in/chantel-gina-pindula-a21739238)
 
 ---
 
-**Project Status**: 🚧 Phase 1 Complete - Data Warehouse Designed & Implemented
+**Project Status**: ✅ Phase 1 & 2 Complete - Data Warehouse Built & Analytics Queries Implemented
 
 **Last Updated**: November 2024
+
+## 🎯 Current Capabilities
+
+- ✅ 6 tables with 800+ rows of data
+- ✅ 15+ strategic indexes
+- ✅ 3 analytical views
+- ✅ 15 complex SQL queries
+- ✅ Working ETL pipeline
+- ✅ Star schema fully implemented
+
+## Sample Query Results
+
+**Top Interview Topics:**
+```
+Arrays:           14 times asked, 85.71% success rate
+Linked Lists:     13 times asked, 69.23% success rate
+Normalization:     7 times asked, 57.14% success rate
+```
+
+**Company Performance:**
+```
+Google:    12 questions across multiple rounds
+Microsoft: 10 questions, multiple technical rounds
+Amazon:    10 questions, varied difficulty levels
+```
 
 **Keywords**: Data Engineering, Data Warehouse, Star Schema, ETL, PostgreSQL, SQL Analytics, Dimensional Modeling
